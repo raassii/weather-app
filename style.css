@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-image: url(./images/pexels-textures-2768398.jpg);
+  background-size: cover;
+}
+.logo {
+  height: 50px;
+  display: flex;
+}
+.logo img {
+  position: relative;
+  width: 640px;
+  height: 510px;
+  margin-top: -230px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: logo 0.5s ease-in;
+}
+@keyframes logo {
+  from {
+    top: -180px;
+  }
+  to {
+    top: 2px;
+  }
+}
+.search {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+input {
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  padding: 6px 30px 6px 10px;
+  width: 300px;
+  background-color: black;
+  color: white;
+}
+button {
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  padding: 6px 15px;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.blackboard-img {
+  width: 350px;
+  height: 380px;
+  box-shadow: 0px 0px 6px 6px rgba(0, 0, 0, 0.214);
+  margin: 0 auto;
+}
+.tv-img {
+  width: 1000px;
+  height: 550px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  padding: 100px 0px 0px 70px;
+}
+.main-left {
+  display: flex;
+  flex-direction: column;
+}
+.weather-details {
+  margin-left: 33px;
+  margin-top: -341px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+}
+.weather-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+.humidity-wind {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin: 0 auto;
+  align-items: center;
+}
+.humidity,
+.wind {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.humidity {
+  left: 0;
+}
+.humidity-wind img {
+  width: 30px;
+  height: 30px;
+}
+.weather-details h1 {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+.weather-details h2 {
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  width: 250px;
+}
+.weather-details p {
+  color: white;
+  font-size: 11px;
+  text-align: center;
+}
+.humidity p:first-of-type,
+.wind p:first-of-type {
+  padding-top: 10px;
+}
+.error p {
+  color: red;
+  position: absolute;
+  display: none;
+  font-size: 30px;
+  margin-top: 133px;
+  margin-left: 792px;
+  z-index: 2;
+  animation-name: zoomin;
+  animation-duration: 0.3s;
+}
+@keyframes zoomin {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+.slideshow {
+  position: absolute;
+  width: 911px;
+  height: 463px;
+  margin-left: 45px;
+  margin-top: -518px;
+  padding: 0;
+}
+.city-img {
+  width: 911px;
+  height: 463px;
+  z-index: 1;
+  animation-name: fadein;
+  animation-duration: 1s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

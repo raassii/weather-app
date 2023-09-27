@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <img src="./images/pngegg.png" />
+    </div>
+    <div class="main">
+      <div class="main-left">
+        <div class="search">
+          <input
+            class="input"
+            type="text"
+            placeholder="enter city name"
+            spellcheck="false"
+          />
+          <button class="button" type="submit">GO!</button>
+        </div>
+        <div class="error">
+          <p>Invalid City Name!</p>
+        </div>
+        <img
+          src="./images/istockphoto-938786046-612x612.jpg"
+          class="blackboard-img"
+        />
+        <div class="weather-details">
+          <img
+            src="./images/Screenshot 2023-09-21 234306.png"
+            class="weather-icon"
+            hidden
+          />
+          <h1 class="temp"></h1>
+          <h2 class="description"></h2>
+          <div class="humidity-wind">
+            <div class="humidity">
+              <img src="./images/humidity.png" hidden />
+              <p class="humidity-percentage"></p>
+              <p class="humidity-text"></p>
+            </div>
+            <div class="wind">
+              <img src="./images/wind.png" hidden />
+              <p class="wind-speed"></p>
+              <p class="wind-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-right">
+        <img
+          src="./images/10-109633_new-tv-screen-thinkpad-.png"
+          class="tv-img"
+        />
+        <div class="slideshow">
+          <img class="city-img" hidden />
+          <img class="city-img" hidden />
+          <img class="city-img" hidden />
+          <img class="city-img" hidden />
+          <img class="city-img" hidden />
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
