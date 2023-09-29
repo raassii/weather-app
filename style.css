@@ -11,6 +11,10 @@ body {
   background-image: url(./images/pexels-textures-2768398.jpg);
   background-size: cover;
 }
+body {
+  display: flex;
+  flex-direction: column;
+}
 .logo {
   height: 50px;
   display: flex;
@@ -19,7 +23,7 @@ body {
   position: relative;
   width: 640px;
   height: 510px;
-  margin-top: -230px;
+  margin-top: -225px;
   margin-left: auto;
   margin-right: auto;
   animation: logo 0.5s ease-in;
@@ -35,13 +39,14 @@ body {
 .search {
   padding-top: 50px;
   padding-bottom: 30px;
+  margin: 0 auto;
 }
 input {
   font-size: 16px;
   border: 0;
   border-radius: 5px;
   padding: 6px 30px 6px 10px;
-  width: 300px;
+  width: auto;
   background-color: black;
   color: white;
 }
@@ -61,21 +66,28 @@ button {
   margin: 0 auto;
 }
 .tv-img {
-  width: 1000px;
+  max-width: 100%;
   height: 550px;
 }
 .main {
   display: flex;
   flex-direction: row;
   gap: 60px;
-  padding: 100px 0px 0px 70px;
+  padding: 100px 20px 0px 60px;
+  margin: 0 auto;
 }
 .main-left {
   display: flex;
   flex-direction: column;
+  z-index: 1;
+}
+.main-right {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
 }
 .weather-details {
-  margin-left: 33px;
+  margin-left: 27px;
   margin-top: -341px;
   display: flex;
   flex-direction: column;
@@ -131,14 +143,14 @@ button {
 .wind p:first-of-type {
   padding-top: 10px;
 }
+.error {
+  margin: 0 auto;
+}
 .error p {
   color: red;
-  position: absolute;
   display: none;
   font-size: 30px;
-  margin-top: 133px;
-  margin-left: 792px;
-  z-index: 2;
+  margin-top: -300px;
   animation-name: zoomin;
   animation-duration: 0.3s;
 }
@@ -151,17 +163,15 @@ button {
   }
 }
 .slideshow {
-  position: absolute;
-  width: 911px;
-  height: 463px;
-  margin-left: 45px;
-  margin-top: -518px;
-  padding: 0;
+  max-width: 91.1%;
+  height: 464px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -512px;
 }
 .city-img {
-  width: 911px;
-  height: 463px;
-  z-index: 1;
+  max-width: 100%;
+  height: 464px;
   animation-name: fadein;
   animation-duration: 1s;
 }
@@ -171,5 +181,50 @@ button {
   }
   to {
     opacity: 1;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main {
+    flex-direction: column;
+    gap: 0px;
+    padding: 85px 0px 0px 0px;
+  }
+  html,
+  body {
+    background-size: auto;
+  }
+  .blackboard-img {
+    width: 280px;
+    height: 280px;
+  }
+  .tv-img {
+    margin: 0 auto;
+  }
+  .weather-details {
+    scale: 0.75;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -290px;
+  }
+  .error p {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 701px) and (max-width: 1300px) {
+  .main {
+    flex-direction: column;
+    gap: 50px;
+    padding: 85px 0px 0px 0px;
+  }
+  html,
+  body {
+    background-size: auto;
+  }
+  .tv-img {
+    margin: 0 auto;
+  }
+  .weather-details {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
